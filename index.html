@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Wpgtk 4.0, color scheme generator</title>
+  <title>Wpgtk 4.6, color scheme generator</title>
   <meta name="description" content="Wpg is an easy to use,
   colorscheme generator and wallpaper manager.
   It's written in python and works in most linux distributions.
@@ -85,21 +85,30 @@ button {
       cli tool.
     </p>
     <h3>How to install:</h3>
-    <p>You can either clone this repository by doing</p>
-    <pre><code>git clone https://github.com/deviantfero/wpgtk</code></pre>
-    <p>Then you have to open the folder of the repository in a terminal and type</p>
-    <pre><code>$ ./install.sh</code></pre>
+    <p>Via pip3:</p>
+    <pre><code>pip3 install wpgtk</code></pre>
     <h3>How to use:</h3>
     <p>you can use the gui or the cli...</p>
-    <pre><code>$ wpg -a /path/to/image #add a wallpaper
-      $ wpg -l #lists the currently added wallpapers
-      $ wpg -c #prints the current wallpaper
-      $ wpg -t #apply colorscheme to terminal (equivalent to wal -r)
-      $ wpg -z wallpaper #shuffles the given wallpaper's colorscheme
-      $ wpg --auto wallpaper #generates fg versions of the first 8 colors of the given wallpaper
-      $ wpg -d wallpaper #remove an existing wallpaper
-      $ wpg -h #display usage
-      $ wpg -s wallpaper1 [wallpaper2] #sets the current wallpaper and colorscheme, wallpaper2 is optional
+    <pre><code>usage: wpg [-h] [-s [S [S ...]]] [-r] [-m] [-a [A [A ...]]] [-l]
+                   [--version] [-d [D [D ...]]] [-c] [-e [E [E ...]]]
+                   [-z [Z [Z ...]]] [-t] [-x] [-y [Y [Y ...]]]
+
+optional arguments:
+  -h, --help      show this help message and exit
+  -s [S [S ...]]  set the wallpaper and colorscheme, apply changes system-wide
+  -r              restore the wallpaper and colorscheme
+  -m              pick a random wallpaper and set it
+  -a [A [A ...]]  add images to the wallpaper folder and generate colorschemes
+  -l              see which wallpapers are available
+  --version, -v   print the current version
+  -d [D [D ...]]  delete the wallpaper(s) from wallpaper folder
+  -c              shows the current wallpaper
+  -e [E [E ...]]  auto adjusts the given colorscheme(s)
+  -z [Z [Z ...]]  shuffles the given colorscheme(s)
+  -t              send color sequences to all terminals
+  -x              add, remove and list templates instead of themes
+  -y [Y [Y ...]]  add an existent basefile template
+
     </code></pre>
   </div>
   <script>
